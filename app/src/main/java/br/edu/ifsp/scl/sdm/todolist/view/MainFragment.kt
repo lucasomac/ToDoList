@@ -80,7 +80,7 @@ class MainFragment : Fragment(), OnTaskClickListener {
                 )
             }
         }
-        viewModel.tasksMld.observe(viewLifecycleOwner) {
+        viewModel.tasksMld.observe(requireActivity()) {
             updateTaskList(it)
         }
         viewModel.getTasks()
